@@ -56,8 +56,8 @@ a {
   padding: 0;
   margin: 0;
   align-items: center;
+
   height: 100%;
-  justify-content: space-around;
 }
 .nav_item {
   width: 100%;
@@ -67,12 +67,15 @@ a {
   margin-top: auto;
 }
 a {
+  text-align: center;
   height: 5rem;
   color: var(--text-primary);
   flex-direction: row;
   align-items: center;
   padding: 1rem;
   gap: 0;
+  cursor: pointer;
+  gap: 1rem;
 }
 
 .link_text {
@@ -81,7 +84,7 @@ a {
 
 i {
   font-size: 2rem;
-  margin: 0 1.5rem;
+  margin: 0 0.5rem;
 }
 
 /*media queries */
@@ -119,6 +122,9 @@ i {
     color: var(--accent);
     transition: all 600ms ease;
   }
+  i:hover {
+    transform: scale(1.4);
+  }
 }
 
 /*for large screens */
@@ -135,5 +141,8 @@ i {
     color: var(--accent);
     transition: all 600ms ease;
     background-color: var(--bg-secondary);
+  }
+  i:hover {
+    transform: scale(1.4);
   }
 }

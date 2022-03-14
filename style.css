@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* css variables */
+
+:root {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  --text-primary: #ada7ff;
+  --text-secondary: #cbb2fe;
+  --bg-primary: #757bc8;
+  --bg-secondary: #8e94f2;
+  --accent: #e8487b;
+}
+
+body {
+  color: black;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* scroll bar */
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background: rgb(156, 156, 156);
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--accent);
+}
+
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+
+/* nav bar */
+.nav_bar {
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  background-color: var(--bg-primary);
+  transition: width 200ms ease;
+}
+
+/* create flexes */
+
+.nav_list,
+a {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  height: 100%;
+  justify-content: space-around;
+}
+.nav_item {
+  width: 100%;
+}
+
+.nav_item:last-child {
+  margin-top: auto;
+}
+a {
+  height: 5rem;
+  color: var(--text-primary);
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  gap: 0;
+}
+
+.link_text {
+  display: none;
+}
+
+i {
+  font-size: 2rem;
+  margin: 0 1.5rem;
+}
+
+/*media queries */
+
+/*for small screens */
+@media only screen and (max-width: 600px) {
+  .nav_bar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .nav_list {
+    flex-direction: row;
+    justify-content: center;
+  }
+  a {
+    justify-content: center;
+    align-items: center;
+  }
+  main {
+    margin: 0;
+  }
+  .nav_item:last-child {
+    margin: 0;
+  }
+  .link_text {
+    display: none;
+  }
+  .nav_bar:hover .link_text {
+    display: none;
+  }
+  i:hover,
+  a:hover {
+    color: var(--accent);
+    transition: all 600ms ease;
+  }
+}
+
+/*for large screens */
+@media only screen and (min-width: 600px) {
+  .nav_bar:hover {
+    width: 16rem;
+  }
+  .nav_bar:hover .link_text {
+    display: inline;
+    text-align: center;
+  }
+  i:hover,
+  a:hover {
+    color: var(--accent);
+    transition: all 600ms ease;
+    background-color: var(--bg-secondary);
+  }
+}
